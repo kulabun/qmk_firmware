@@ -5,15 +5,22 @@
 qmk json2c layout.json >keymap.c
 ```
 
+**Setup environment**
+```
+# Debian
+python3 -m venv .venv
+source .venv/bin/activate
+pip install qmk
+qmk setup
+```
+
 **How set up qmk environment?**
 ```bash
-make git-submodule
 qmk compile -km kulabun -kb kinesis/kint41
 ```
 
 **How to flash?**
 ```bash
-make git-submodule
 qmk compile -km kulabun -kb kinesis/kint41
 qmk flash -km kulabun -kb kinesis/kint41
 ```
